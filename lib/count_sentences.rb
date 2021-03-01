@@ -15,10 +15,11 @@ class String
   end
 
   def count_sentences   # get back a count of sentences on a string
-    self.split(".", "?", "!")#.count.strip
+    binding.pry
 
+    self.split(".", "?", "!")#.count.strip
 #Ruby lib/count_sentences.rb
     puts "hi"
-    binding.pry
+    
   end
 end
