@@ -15,11 +15,28 @@ class String
   end
 
   def count_sentences   # get back a count of sentences on a string
-    binding.pry
+    # To use regex:
+    #   searching for ( . ! ? )
+    #   start of search uses / and end /
+    #     (/ . ! ? /)
+    #   beginning of each criteria is \
+    #     (/ \. \! \? /)
+    #   To tell between the criteria, use |
+    #     (/ \. | \! | \? /)
+    #   Clean up spaces otherwise won't work
+    #     (/\.|\!|\?/)
 
-    self.split(".", "?", "!")#.count.strip
-#Ruby lib/count_sentences.rb
-    puts "hi"
+new_array =  self.split(/\.|\!|\?/).count
+counter_array = []
+#new_array =  sent.split(/\.|\!|\?/)
+# sent.split(/\.|\!|\?/)
+new_array.each do |sentence|
+  if sentence.length > 1
+    counter_array << sentence
+  end
+end
+
+counter_array.count
 
   end
 end
