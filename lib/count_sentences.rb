@@ -6,12 +6,12 @@ class String
     self.end_with?(".")
   end
 
-  def question? # true if ends with ? false if not
+  def question?   # true if ends with ? false if not
     self.end_with?("?")
   end
 
-  def exclamation?
-
+  def exclamation?  # true if ends with ! false if not
+    self.end_with?("!")
   end
 
   def count_sentences
