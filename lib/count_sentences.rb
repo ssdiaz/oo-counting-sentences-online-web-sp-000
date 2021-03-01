@@ -26,7 +26,7 @@ class String
     #   Clean up spaces otherwise won't work
     #     (/\.|\!|\?/)
 
-new_array =  self.split(/\.|\!|\?/).count
+new_array =  self.split(/\.|\!|\?/)
 counter_array = []
 #new_array =  sent.split(/\.|\!|\?/)
 # sent.split(/\.|\!|\?/)
