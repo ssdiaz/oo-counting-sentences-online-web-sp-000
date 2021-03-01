@@ -17,26 +17,28 @@ class String
   def count_sentences   # get back a count of sentences on a string
     # To use regex:
     #   searching for ( . ! ? )
-    #   start of search uses / and end /
+    #   start of regex search uses / and at end /
     #     (/ . ! ? /)
     #   beginning of each criteria is \
     #     (/ \. \! \? /)
-    #   To tell between the criteria, use |
+    #   To identify/seperate criteria, use |
     #     (/ \. | \! | \? /)
     #   Clean up spaces otherwise won't work
     #     (/\.|\!|\?/)
 
-new_array =  self.split(/\.|\!|\?/)
-counter_array = []
-#new_array =  sent.split(/\.|\!|\?/)
-# sent.split(/\.|\!|\?/)
-new_array.each do |sentence|
-  if sentence.length > 1
-    counter_array << sentence
+    new_array =  self.split(/\.|\!|\?/)
+    counter_array = []
+    
+    new_array.each do |sentence|
+      if sentence.length > 1
+        counter_array << sentence
+      end
+    end
+
+    counter_array.count
+
   end
 end
 
-counter_array.count
-
-  end
-end
+# solution online:
+  # self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
